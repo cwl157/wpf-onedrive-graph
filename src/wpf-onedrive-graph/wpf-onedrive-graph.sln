@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf-onedrive-graph", "wpf-onedrive-graph\wpf-onedrive-graph.csproj", "{CF1F52FC-8A7A-4CA3-A172-E16335AD3605}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF1F52FC-8A7A-4CA3-A172-E16335AD3605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1F52FC-8A7A-4CA3-A172-E16335AD3605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1F52FC-8A7A-4CA3-A172-E16335AD3605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1F52FC-8A7A-4CA3-A172-E16335AD3605}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {751E7ED2-720E-4158-8288-98026A2C7B85}
+	EndGlobalSection
+EndGlobal

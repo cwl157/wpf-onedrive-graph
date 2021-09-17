@@ -1,0 +1,50 @@
+﻿<Window x:Class="wpf_onedrive_graph.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="650" SizeToContent="Height"
+        Closing="Window_Closing">
+    <Grid>
+        <StackPanel Background="Azure">
+            <TextBlock TextWrapping="Wrap" Padding="5" Text="This application demonstrates uploading and downloading a file to onedrive. If you have a onedrive account, use the Sign-In button to authenticate. The first row downloads a file from OneDrive. The second row uploads a file to OneDrive." />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button x:Name="SignInButton" Content="Sign-In" HorizontalAlignment="Right" Padding="5" Click="Login_Click" Margin="5" FontFamily="Segoe Ui"/>
+                <Button x:Name="SignOutButton" Content="Sign-Out" HorizontalAlignment="Right" Padding="5" Click="SignOutButton_Click" Margin="5" Visibility="Collapsed" FontFamily="Segoe Ui"/>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="OneDrive file:" Margin="5,0,0,0" FontFamily="Segoe Ui" />
+                <TextBox Name="FilePathDownload" Height="23" Grid.Column="1" TextWrapping="Wrap" Text="path-to-file" FontFamily="Segoe UI" />
+                <Label Grid.Column="2" Content="Local file path:" Margin="0,0,0,0" FontFamily="Segoe Ui" />
+                <TextBox Name="LocalFilePath" Height="23" Grid.Column="3" TextWrapping="Wrap" Text="path-to-file" FontFamily="Segoe UI" />
+                <Button x:Name="DownloadButton" Content="Download" Click="DownloadButton_Click" Margin="5" Grid.Column="4" FontFamily="Segoe Ui"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="File to upload:" Margin="5,0,0,0" FontFamily="Segoe Ui" />
+                <TextBox Name="FilePathUpload" Height="23" Grid.Column="1" TextWrapping="Wrap" Text="local-file-path" FontFamily="Segoe UI" />
+                <Label Grid.Column="2" Content="OneDrive path:" Margin="5,0,0,0" FontFamily="Segoe Ui" />
+                <TextBox Name="OneDrivePath" Height="23" Grid.Column="3" TextWrapping="Wrap" Text="path-to-onedrive-destination" FontFamily="Segoe UI" />
+                <Button x:Name="UploadButton" Content="Upload" Click="UploadButton_Click" Margin="5" Grid.Column="4" FontFamily="Segoe Ui"/>
+            </Grid>
+            <Label Content="API Call Results" Margin="0,0,0,-5" FontFamily="Segoe Ui" />
+            <TextBox x:Name="ResultText" TextWrapping="Wrap" MinHeight="120" Margin="5" FontFamily="Segoe Ui"/>
+            <Label Content="Token Info" Margin="0,0,0,-5" FontFamily="Segoe Ui" />
+            <TextBox x:Name="TokenInfoText" TextWrapping="Wrap" MinHeight="70" Margin="5" FontFamily="Segoe Ui"/>
+        </StackPanel>
+    </Grid>
+</Window>
